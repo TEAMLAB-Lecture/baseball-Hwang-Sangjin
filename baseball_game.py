@@ -344,7 +344,12 @@ def main():
                         else:
                             print("Wrong Input, Input again")
 
-                elif user_input == "0":
+                
+                
+                if break_the_loop2 == True:
+                    break
+
+            elif user_input == "0":
                     while True:
                             answer = input("You win, one more(Y/N)?")
                             if is_yes(answer):
@@ -356,9 +361,6 @@ def main():
                                 break
                             else:
                                 print("Wrong Input, Input again")
-                
-                if break_the_loop2 == True:
-                    break
                     
 
 
