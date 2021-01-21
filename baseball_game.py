@@ -321,10 +321,12 @@ def main():
     #print(is_no("No"))
     break_the_loop1 = False
     break_the_loop2 = False
+    
     while break_the_loop1 is False:
+        temp_state = [0,0]
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
-        while break_the_loop2 is False:
+        while temp_state[0] <3:
             user_input = input("Input guess number : ")
 
             if user_input == '0':
@@ -335,10 +337,6 @@ def main():
                 temp_state = get_strikes_or_ball(user_input,random_number)
 
                 print("Strikes : %d , Balls : %d" %(temp_state[0],temp_state[1]))
-
-                if temp_state[0] == 3:
-                    break_the_loop2 = True
-                    break
 
             else:
                 print("Wrong Input, Input again")
