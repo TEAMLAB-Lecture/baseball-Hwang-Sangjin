@@ -324,7 +324,7 @@ def main():
     while break_the_loop1 is False:
         random_number = str(get_not_duplicated_three_digit_number())
         print("Random Number is : ", random_number)
-        while True:
+        while break_the_loop2 is False:
             user_input = input("Input guess number : ")
 
             if user_input == '0':
@@ -337,29 +337,21 @@ def main():
                 print("Strikes : %d , Balls : %d" %(temp_state[0],temp_state[1]))
 
                 if temp_state[0] == 3:
-                    while True:
-                        answer = input("You win, one more(Y/N)?")
-                        if is_yes(answer):
-                            break_the_loop2 = True
-                            break
-                        elif is_no(answer):
-                            break_the_loop2 = True
-                            break_the_loop1 = True
-                            break
-                        else:
-                            print("Wrong Input, Input again")
-
-                
-                
-                if break_the_loop2 == True:
+                    break_the_loop2 = True
                     break
 
             else:
                 print("Wrong Input, Input again")
 
-        if break_the_loop1 == True:
-            break
-
+        while break_the_loop1 is False:
+            OneMore = input("You win, one more(Y/N) ?")
+            if is_no(OneMore):
+                break_the_loop1 = True
+                break
+            elif is_yes(OneMore):
+                break
+            else:
+                print("Wrong Input, Input again")
     
 
     # ==================================
