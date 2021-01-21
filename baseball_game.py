@@ -98,14 +98,14 @@ def is_duplicated_number(three_digit):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    result = True
+    result = False
 
     temp_arr=[]
     check =[False,False,False,False,False,False,False,False,False,False]
 
     for i in str(three_digit):
         if check[int(i)]== True:
-            result = False
+            result = True
             break
         else:
             check[int(i)] = True
