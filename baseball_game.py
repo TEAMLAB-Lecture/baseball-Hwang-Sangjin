@@ -350,17 +350,9 @@ def main():
                     break
 
             elif user_input == "0":
-                    while True:
-                            answer = input("You win, one more(Y/N)?")
-                            if is_yes(answer):
-                                break_the_loop2 = True
-                                break
-                            elif is_no(answer):
-                                break_the_loop2 = True
-                                break_the_loop1 = True
-                                break
-                            else:
-                                print("Wrong Input, Input again")
+                   break_the_loop1 =True
+                   
+                   break
                     
 
 
